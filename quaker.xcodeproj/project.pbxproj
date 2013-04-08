@@ -1,0 +1,337 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1120E2216ECF37600BD12B8 /* QKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1120E2116ECF37600BD12B8 /* QKMainViewController.m */; };
+		F14F4F7516F21A2800251F59 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14F4F7416F21A2800251F59 /* CoreFoundation.framework */; };
+		F1606F1A16E8D1DA00382D54 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1606F1916E8D1DA00382D54 /* UIKit.framework */; };
+		F1606F1C16E8D1DA00382D54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1606F1B16E8D1DA00382D54 /* Foundation.framework */; };
+		F1606F1E16E8D1DA00382D54 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1606F1D16E8D1DA00382D54 /* CoreGraphics.framework */; };
+		F1606F2416E8D1DA00382D54 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1606F2216E8D1DA00382D54 /* InfoPlist.strings */; };
+		F1606F2616E8D1DA00382D54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1606F2516E8D1DA00382D54 /* main.m */; };
+		F1606F2A16E8D1DA00382D54 /* QKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1606F2916E8D1DA00382D54 /* QKAppDelegate.m */; };
+		F1606F2C16E8D1DA00382D54 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F1606F2B16E8D1DA00382D54 /* Default.png */; };
+		F1606F2E16E8D1DA00382D54 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1606F2D16E8D1DA00382D54 /* Default@2x.png */; };
+		F1606F3016E8D1DA00382D54 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1606F2F16E8D1DA00382D54 /* Default-568h@2x.png */; };
+		F1606F3316E8D1DA00382D54 /* QKFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1606F3216E8D1DA00382D54 /* QKFirstViewController.m */; };
+		F1606F3616E8D1DA00382D54 /* QKFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1606F3416E8D1DA00382D54 /* QKFirstViewController.xib */; };
+		F172DEAD16EE039A00626AE5 /* QKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F172DEAB16EE039A00626AE5 /* QKSecondViewController.m */; };
+		F172DEAE16EE039A00626AE5 /* QKSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F172DEAC16EE039A00626AE5 /* QKSecondViewController.xib */; };
+		F1A2A0A516EF6143002F2F94 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A2A0A416EF6143002F2F94 /* MapKit.framework */; };
+		F1A2A0A816EF690E002F2F94 /* QKNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A2A0A716EF690E002F2F94 /* QKNetWorkManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F1120E2016ECF37600BD12B8 /* QKMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKMainViewController.h; sourceTree = "<group>"; };
+		F1120E2116ECF37600BD12B8 /* QKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKMainViewController.m; sourceTree = "<group>"; };
+		F14F4F7416F21A2800251F59 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		F1606F1616E8D1DA00382D54 /* quaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1606F1916E8D1DA00382D54 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F1606F1B16E8D1DA00382D54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F1606F1D16E8D1DA00382D54 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F1606F2116E8D1DA00382D54 /* quaker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "quaker-Info.plist"; sourceTree = "<group>"; };
+		F1606F2316E8D1DA00382D54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F1606F2516E8D1DA00382D54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F1606F2716E8D1DA00382D54 /* quaker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "quaker-Prefix.pch"; sourceTree = "<group>"; };
+		F1606F2816E8D1DA00382D54 /* QKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKAppDelegate.h; sourceTree = "<group>"; };
+		F1606F2916E8D1DA00382D54 /* QKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKAppDelegate.m; sourceTree = "<group>"; };
+		F1606F2B16E8D1DA00382D54 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F1606F2D16E8D1DA00382D54 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F1606F2F16E8D1DA00382D54 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F1606F3116E8D1DA00382D54 /* QKFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKFirstViewController.h; sourceTree = "<group>"; };
+		F1606F3216E8D1DA00382D54 /* QKFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QKFirstViewController.m; sourceTree = "<group>"; };
+		F1606F3516E8D1DA00382D54 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/QKFirstViewController.xib; sourceTree = "<group>"; };
+		F172DEAA16EE039A00626AE5 /* QKSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKSecondViewController.h; sourceTree = "<group>"; };
+		F172DEAB16EE039A00626AE5 /* QKSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKSecondViewController.m; sourceTree = "<group>"; };
+		F172DEAC16EE039A00626AE5 /* QKSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QKSecondViewController.xib; sourceTree = "<group>"; };
+		F1A2A0A416EF6143002F2F94 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F1A2A0A616EF690E002F2F94 /* QKNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKNetWorkManager.h; sourceTree = "<group>"; };
+		F1A2A0A716EF690E002F2F94 /* QKNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKNetWorkManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1606F1316E8D1DA00382D54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F14F4F7516F21A2800251F59 /* CoreFoundation.framework in Frameworks */,
+				F1A2A0A516EF6143002F2F94 /* MapKit.framework in Frameworks */,
+				F1606F1A16E8D1DA00382D54 /* UIKit.framework in Frameworks */,
+				F1606F1C16E8D1DA00382D54 /* Foundation.framework in Frameworks */,
+				F1606F1E16E8D1DA00382D54 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F1606F0D16E8D1DA00382D54 = {
+			isa = PBXGroup;
+			children = (
+				F14F4F7416F21A2800251F59 /* CoreFoundation.framework */,
+				F1A2A0A416EF6143002F2F94 /* MapKit.framework */,
+				F1606F1F16E8D1DA00382D54 /* quaker */,
+				F1606F1816E8D1DA00382D54 /* Frameworks */,
+				F1606F1716E8D1DA00382D54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1606F1716E8D1DA00382D54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1606F1616E8D1DA00382D54 /* quaker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1606F1816E8D1DA00382D54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1606F1916E8D1DA00382D54 /* UIKit.framework */,
+				F1606F1B16E8D1DA00382D54 /* Foundation.framework */,
+				F1606F1D16E8D1DA00382D54 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1606F1F16E8D1DA00382D54 /* quaker */ = {
+			isa = PBXGroup;
+			children = (
+				F1606F2816E8D1DA00382D54 /* QKAppDelegate.h */,
+				F1606F2916E8D1DA00382D54 /* QKAppDelegate.m */,
+				F1606F3116E8D1DA00382D54 /* QKFirstViewController.h */,
+				F1606F3216E8D1DA00382D54 /* QKFirstViewController.m */,
+				F1606F3416E8D1DA00382D54 /* QKFirstViewController.xib */,
+				F1606F2016E8D1DA00382D54 /* Supporting Files */,
+				F1120E2016ECF37600BD12B8 /* QKMainViewController.h */,
+				F1120E2116ECF37600BD12B8 /* QKMainViewController.m */,
+				F172DEAA16EE039A00626AE5 /* QKSecondViewController.h */,
+				F172DEAB16EE039A00626AE5 /* QKSecondViewController.m */,
+				F172DEAC16EE039A00626AE5 /* QKSecondViewController.xib */,
+				F1A2A0A616EF690E002F2F94 /* QKNetWorkManager.h */,
+				F1A2A0A716EF690E002F2F94 /* QKNetWorkManager.m */,
+			);
+			path = quaker;
+			sourceTree = "<group>";
+		};
+		F1606F2016E8D1DA00382D54 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1606F2116E8D1DA00382D54 /* quaker-Info.plist */,
+				F1606F2216E8D1DA00382D54 /* InfoPlist.strings */,
+				F1606F2516E8D1DA00382D54 /* main.m */,
+				F1606F2716E8D1DA00382D54 /* quaker-Prefix.pch */,
+				F1606F2B16E8D1DA00382D54 /* Default.png */,
+				F1606F2D16E8D1DA00382D54 /* Default@2x.png */,
+				F1606F2F16E8D1DA00382D54 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1606F1516E8D1DA00382D54 /* quaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1606F3916E8D1DA00382D54 /* Build configuration list for PBXNativeTarget "quaker" */;
+			buildPhases = (
+				F1606F1216E8D1DA00382D54 /* Sources */,
+				F1606F1316E8D1DA00382D54 /* Frameworks */,
+				F1606F1416E8D1DA00382D54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = quaker;
+			productName = quaker;
+			productReference = F1606F1616E8D1DA00382D54 /* quaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1606F0E16E8D1DA00382D54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = QK;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = eudaimonia;
+			};
+			buildConfigurationList = F1606F1116E8D1DA00382D54 /* Build configuration list for PBXProject "quaker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F1606F0D16E8D1DA00382D54;
+			productRefGroup = F1606F1716E8D1DA00382D54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1606F1516E8D1DA00382D54 /* quaker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1606F1416E8D1DA00382D54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1606F2416E8D1DA00382D54 /* InfoPlist.strings in Resources */,
+				F1606F2C16E8D1DA00382D54 /* Default.png in Resources */,
+				F1606F2E16E8D1DA00382D54 /* Default@2x.png in Resources */,
+				F1606F3016E8D1DA00382D54 /* Default-568h@2x.png in Resources */,
+				F1606F3616E8D1DA00382D54 /* QKFirstViewController.xib in Resources */,
+				F172DEAE16EE039A00626AE5 /* QKSecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1606F1216E8D1DA00382D54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1606F2616E8D1DA00382D54 /* main.m in Sources */,
+				F1606F2A16E8D1DA00382D54 /* QKAppDelegate.m in Sources */,
+				F1606F3316E8D1DA00382D54 /* QKFirstViewController.m in Sources */,
+				F1120E2216ECF37600BD12B8 /* QKMainViewController.m in Sources */,
+				F172DEAD16EE039A00626AE5 /* QKSecondViewController.m in Sources */,
+				F1A2A0A816EF690E002F2F94 /* QKNetWorkManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F1606F2216E8D1DA00382D54 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1606F2316E8D1DA00382D54 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F1606F3416E8D1DA00382D54 /* QKFirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1606F3516E8D1DA00382D54 /* en */,
+			);
+			name = QKFirstViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1606F3716E8D1DA00382D54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F1606F3816E8D1DA00382D54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1606F3A16E8D1DA00382D54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "quaker/quaker-Prefix.pch";
+				INFOPLIST_FILE = "quaker/quaker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F1606F3B16E8D1DA00382D54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "quaker/quaker-Prefix.pch";
+				INFOPLIST_FILE = "quaker/quaker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1606F1116E8D1DA00382D54 /* Build configuration list for PBXProject "quaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1606F3716E8D1DA00382D54 /* Debug */,
+				F1606F3816E8D1DA00382D54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1606F3916E8D1DA00382D54 /* Build configuration list for PBXNativeTarget "quaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1606F3A16E8D1DA00382D54 /* Debug */,
+				F1606F3B16E8D1DA00382D54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1606F0E16E8D1DA00382D54 /* Project object */;
+}
