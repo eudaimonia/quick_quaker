@@ -57,17 +57,17 @@
                 size_t estimated = dispatch_source_get_data(sockSourceForRead) + 1;
                 char *buffer = (char *) malloc(estimated);
                 if (buffer) {
-                    size_t len = read(fd, buffer, estimated); // TODO: the return value of read should be checked
+                    size_t len = read(self.sockFd, buffer, estimated); // TODO: the return value of read should be checked
                     buffer[len] = 0;
                     NSString *content = [[NSString alloc] initWithCString: buffer encoding:NSASCIIStringEncoding];
-                    mainQueue = dispatch_get_main_queue();
+                    dispatch_queue_t mainQueue = dispatch_get_main_queue();
                     // update the UI by netnwork data
-                    dispacth_sync(mainQueue, ^{[self updateUIByData: content];});
+                    dispatch_sync(mainQueue, ^{[self updateUIByData: content];});
                     free(buffer);
                 }
                 });
             dispatch_source_set_cancel_handler(sockSourceForRead, ^{close(self.sockFd);});
-            dispacth_resume(sockSourceForRead);
+            dispatch_resume(sockSourceForRead);
             }
         }
 	});

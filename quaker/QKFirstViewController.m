@@ -8,6 +8,12 @@
 
 #import "QKFirstViewController.h"
 
+NSString * json_parse(NSString * content, NSString * key) {
+    // TODO
+    NSString *res = [[NSString alloc] init];
+    return res;
+}
+
 @interface QKFirstViewController ()
 
 @end
