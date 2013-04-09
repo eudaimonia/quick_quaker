@@ -63,8 +63,11 @@
                     mainQueue = dispatch_get_main_queue();
                     // update the UI by netnwork data
                     dispacth_sync(mainQueue, ^{[self updateUIByData: content];});
+                    free(buffer);
                 }
                 });
+            dispatch_source_set_cancel_handler(sockSourceForRead, ^{close(self.sockFd);});
+            dispacth_resume(sockSourceForRead);
             }
         }
 	});
