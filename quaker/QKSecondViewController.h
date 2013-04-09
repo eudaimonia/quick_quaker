@@ -11,5 +11,5 @@
 @interface QKSecondViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *buttonBack;
 - (IBAction)buttonBackClicked:(id)sender;
-
+- (void) updateUIByData:(NSString *)content;
 @end

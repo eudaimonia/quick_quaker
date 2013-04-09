@@ -18,12 +18,15 @@
 
 
 @interface QKAppDelegate()
+
 @property (strong, nonatomic) NSString *serverAddress;
 @property (nonatomic) short serverPort;
 @property (nonatomic) int sockFd;
 
 - (void) networkConfig;
 - (void) networkInit;
+- (void) updateUIByData: (NSString *)content;
+
 @end
 
 @implementation QKAppDelegate
@@ -45,9 +48,30 @@
 	dispatch_sync(queue, ^{
 		if (-1 == connect(self.sockFd, &addr, sizeof(addr))) {
 			NSLog(@"Failed to connect to server");
-		}
+		} else {
+            dispatch_source_t sockSourceForRead = dispatch_source_create(DISPATCH_SOURCE_TYPE_READ,self.sockFd, 0, queue);
+            if(!sockSourceForRead) {
+                close(self.sockFd);
+            } else {
+            dispatch_source_set_event_handler(sockSourceForRead, ^{
+                size_t estimated = dispatch_source_get_data(sockSourceForRead) + 1;
+                char *buffer = (char *) malloc(estimated);
+                if (buffer) {
+                    size_t len = read(fd, buffer, estimated); // TODO: the return value of read should be checked
+                    buffer[len] = 0;
+                    NSString *content = [[NSString alloc] initWithCString: buffer encoding:NSASCIIStringEncoding];
+                    mainQueue = dispatch_get_main_queue();
+                    // update the UI by netnwork data
+                    dispacth_sync(mainQueue, ^{[self updateUIByData: content];});
+                }
+                });
+            }
+        }
 	});
-	dispatch_source_t readSource = dispatch_source_create(DISPATCH_SOURCE_TYPE_READ, self.sockFd, 0, queue);
+}
+
+- (void) updateUIByData: (NSString *)content {
+    [self.mainViewController updateUIByData:content];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -57,13 +81,6 @@
     self.mainViewController = [[QKMainViewController alloc] init];
     self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
-	/*
-    self.networkManager = [[QKNetWorkManager alloc] init];
-    dispatch_queue_t networkQueue = dispatch_queue_create("networking", NULL);
-    dispatch_async(networkQueue, ^{
-        [self.networkManager buildConnection];
-    });
-	*/
 	[self networkConfig];
 	[self networkInit];
     return YES;

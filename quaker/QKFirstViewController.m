@@ -32,15 +32,12 @@
     [self.view.superview exchangeSubviewAtIndex:0 withSubviewAtIndex:1];
 }
 
-- (void) upateUIByNetworkwithDatetime:(NSString *) dateTime \
-lantitude:(NSString *) lantitude \
-longtitude:(NSString *) longtitude \
-magtitude:(NSString *) magtitude
-region:(NSString *) region {
-    self.labelDatetime.text = dateTime;
-    self.labelLantitude.text = lantitude;
-    self.labelLongtitude.text = longtitude;
-    self.labelMagtitude.text = magtitude;
-    self.labelRegion.text = region;
+- (void) updateUIByData:(NSString*) content {
+    // TODO: implement json_parse
+    self.labelDatetime.text = json_parse(content, @"dateTime");
+    self.labelLantitude.text = json_parse(content, @"lantitude");
+    self.labelLongtitude.text = json_parse(content, @"longtitude");
+    self.labelMagtitude.text = json_parse(content, @"magtitude");
+    self.labelRegion.text = json_parse(content, @"region");
 }
 @end

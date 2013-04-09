@@ -17,4 +17,6 @@
 
 @property (strong, nonatomic) QKSecondViewController *secondViewController;
 
+- (void) updateUIByData:(NSString *) content;
+
 @end

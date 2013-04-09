@@ -16,9 +16,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelRegion;
 @property (weak, nonatomic) IBOutlet UILabel *labelDatetime;
 - (IBAction)buttonMapClicked:(id)sender;
-- (void) upateUIByNetworkwithDatetime:(NSString *) dateTime \
-    lantitude:(NSString *) lantitude \
-    longtitude:(NSString *) longtitude \
-    magtitude:(NSString *) magtitude\
-    region:(NSString *) region;
+- (void) updateUIByData: (NSString *) content;
 @end
