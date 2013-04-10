@@ -25,7 +25,7 @@
 
 - (void) networkConfig;
 - (void) networkInit;
-- (void) updateUIByData: (NSString *)content;
+- (void) updateUIByData: (id)jsonOjbect;
 
 @end
 
@@ -59,10 +59,13 @@
                 if (buffer) {
                     size_t len = read(self.sockFd, buffer, estimated); // TODO: the return value of read should be checked
                     buffer[len] = 0;
-                    NSString *content = [[NSString alloc] initWithCString: buffer encoding:NSASCIIStringEncoding];
+                    //NSString *content = [[NSString alloc] initWithCString: buffer encoding:NSASCIIStringEncoding];
+                    NSData *content = [NSData dataWithBytes:buffer length:len];
+                    NSError *parseError = nil;
+                    id jsonOjbect = [NSJSONSerialization JSONObjectWithData:content options: NSJSONReadingAllowFraments error:parseError];
                     dispatch_queue_t mainQueue = dispatch_get_main_queue();
                     // update the UI by netnwork data
-                    dispatch_sync(mainQueue, ^{[self updateUIByData: content];});
+                    dispatch_sync(mainQueue, ^{[self updateUIByData: jsonOjbect];});
                     free(buffer);
                 }
                 });
@@ -73,8 +76,8 @@
 	});
 }
 
-- (void) updateUIByData: (NSString *)content {
-    [self.mainViewController updateUIByData:content];
+- (void) updateUIByData: (id)jsonOjbect{
+    [self.mainViewController updateUIByData:jsonOjbect];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
