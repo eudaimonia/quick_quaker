@@ -40,6 +40,6 @@
     [self.view.superview exchangeSubviewAtIndex:0 withSubviewAtIndex:1];
 }
 
--(void) updateUIByData:(NSString *) content {
+-(void) updateUIByData:(id) jsonObject{
 }
 @end

@@ -16,5 +16,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelRegion;
 @property (weak, nonatomic) IBOutlet UILabel *labelDatetime;
 - (IBAction)buttonMapClicked:(id)sender;
-- (void) updateUIByData: (NSString *) content;
+- (void) updateUIByData: (id) jsonObject;
 @end

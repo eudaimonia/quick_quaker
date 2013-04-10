@@ -41,9 +41,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) updateUIByData:(NSString *) content {
-    [self.firstViewController updateUIByData: content];
-    [self.secondViewController updateUIByData: content];
+- (void) updateUIByData:(id) jsonObject{
+    [self.firstViewController updateUIByData: jsonObject];
+    [self.secondViewController updateUIByData: jsonObject];
 }
 
 @end

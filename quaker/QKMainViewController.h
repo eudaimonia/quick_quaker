@@ -17,6 +17,6 @@
 
 @property (strong, nonatomic) QKSecondViewController *secondViewController;
 
-- (void) updateUIByData:(NSString *) content;
+- (void) updateUIByData:(id) jsonObject;
 
 @end

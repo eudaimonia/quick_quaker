@@ -8,7 +8,7 @@
 
 #import "QKFirstViewController.h"
 
-NSString * json_parse(NSString * content, NSString * key) {
+NSString * json_parse(id jsonObject, NSString * key) {
     // TODO
     NSString *res = [[NSString alloc] init];
     return res;
@@ -38,12 +38,15 @@ NSString * json_parse(NSString * content, NSString * key) {
     [self.view.superview exchangeSubviewAtIndex:0 withSubviewAtIndex:1];
 }
 
-- (void) updateUIByData:(NSString*) content {
+- (void) updateUIByData:(id) jsonObject {
     // TODO: implement json_parse
-    self.labelDatetime.text = json_parse(content, @"dateTime");
-    self.labelLantitude.text = json_parse(content, @"lantitude");
-    self.labelLongtitude.text = json_parse(content, @"longtitude");
-    self.labelMagtitude.text = json_parse(content, @"magtitude");
-    self.labelRegion.text = json_parse(content, @"region");
+	/*
+    self.labelDatetime.text = json_parse(jsonObject, @"dateTime");
+    self.labelLantitude.text = json_parse(jsonObject, @"lantitude");
+    self.labelLongtitude.text = json_parse(jsonObject, @"longtitude");
+    self.labelMagtitude.text = json_parse(jsonObject, @"magtitude");
+    self.labelRegion.text = json_parse(jsonObject, @"region");
+	*/
+	NSLog(@"%@", jsonObject);
 }
 @end

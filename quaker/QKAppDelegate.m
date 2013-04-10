@@ -25,7 +25,7 @@
 
 - (void) networkConfig;
 - (void) networkInit;
-- (void) updateUIByData: (id)jsonOjbect;
+- (void) updateUIByData: (id)jsonObject;
 
 @end
 
@@ -49,6 +49,7 @@
 		if (-1 == connect(self.sockFd, &addr, sizeof(addr))) {
 			NSLog(@"Failed to connect to server");
 		} else {
+            
             dispatch_source_t sockSourceForRead = dispatch_source_create(DISPATCH_SOURCE_TYPE_READ,self.sockFd, 0, queue);
             if(!sockSourceForRead) {
                 close(self.sockFd);
@@ -62,10 +63,13 @@
                     //NSString *content = [[NSString alloc] initWithCString: buffer encoding:NSASCIIStringEncoding];
                     NSData *content = [NSData dataWithBytes:buffer length:len];
                     NSError *parseError = nil;
-                    id jsonOjbect = [NSJSONSerialization JSONObjectWithData:content options: NSJSONReadingAllowFraments error:parseError];
-                    dispatch_queue_t mainQueue = dispatch_get_main_queue();
-                    // update the UI by netnwork data
-                    dispatch_sync(mainQueue, ^{[self updateUIByData: jsonOjbect];});
+                    // FIXME
+                    id jsonObject = [NSJSONSerialization JSONObjectWithData:content options: NSJSONReadingAllowFragments error:&parseError];
+					if ([jsonObject respondsToSelector:@selector(objectForKey:)]) {
+						dispatch_queue_t mainQueue = dispatch_get_main_queue();
+						// update the UI by netnwork data
+						dispatch_sync(mainQueue, ^{[self updateUIByData: jsonObject];});
+					}
                     free(buffer);
                 }
                 });
@@ -76,8 +80,8 @@
 	});
 }
 
-- (void) updateUIByData: (id)jsonOjbect{
-    [self.mainViewController updateUIByData:jsonOjbect];
+- (void) updateUIByData: (id)jsonObject{
+    [self.mainViewController updateUIByData:jsonObject];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
