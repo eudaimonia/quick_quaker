@@ -46,7 +46,7 @@
 	self.sockFd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
 	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0);
 	dispatch_sync(queue, ^{
-		if (-1 == connect(self.sockFd, &addr, sizeof(addr))) {
+		if (-1 == connect(self.sockFd, (struct sockaddr*)&addr, sizeof(addr))) {
 			NSLog(@"Failed to connect to server");
 		} else {
             
@@ -61,19 +61,25 @@
                     size_t len = read(self.sockFd, buffer, estimated); // TODO: the return value of read should be checked
                     buffer[len] = 0;
                     //NSString *content = [[NSString alloc] initWithCString: buffer encoding:NSASCIIStringEncoding];
+                    NSLog(@"%s", buffer);
                     NSData *content = [NSData dataWithBytes:buffer length:len];
                     NSError *parseError = nil;
                     // FIXME
                     id jsonObject = [NSJSONSerialization JSONObjectWithData:content options: NSJSONReadingAllowFragments error:&parseError];
 					if ([jsonObject respondsToSelector:@selector(objectForKey:)]) {
+                        NSLog(@"convert data to json ojbect successfully");
 						dispatch_queue_t mainQueue = dispatch_get_main_queue();
 						// update the UI by netnwork data
 						dispatch_sync(mainQueue, ^{[self updateUIByData: jsonObject];});
-					}
+					} else {
+                        NSLog(@"Failed to convert data to json object");
+                    }
                     free(buffer);
                 }
                 });
             dispatch_source_set_cancel_handler(sockSourceForRead, ^{close(self.sockFd);});
+            char *verifyInfo="from ios";
+            write(self.sockFd, verifyInfo, strlen(verifyInfo) + 1); // send verification info to the server
             dispatch_resume(sockSourceForRead);
             }
         }
